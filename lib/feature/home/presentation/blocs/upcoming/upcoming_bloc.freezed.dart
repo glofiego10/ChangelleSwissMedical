@@ -3,7 +3,7 @@
 // ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
-part of 'movie_details_bloc.dart';
+part of 'upcoming_bloc.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -15,174 +15,124 @@ final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
-mixin _$MovieDetailsEvent {
-  int get id => throw _privateConstructorUsedError;
+mixin _$UpcomingEvent {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(int id) getDetails,
+    required TResult Function() getMovies,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int id)? getDetails,
+    TResult? Function()? getMovies,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int id)? getDetails,
+    TResult Function()? getMovies,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetDetails value) getDetails,
+    required TResult Function(_GetMovies value) getMovies,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetDetails value)? getDetails,
+    TResult? Function(_GetMovies value)? getMovies,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetDetails value)? getDetails,
+    TResult Function(_GetMovies value)? getMovies,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
-
-  /// Create a copy of MovieDetailsEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $MovieDetailsEventCopyWith<MovieDetailsEvent> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $MovieDetailsEventCopyWith<$Res> {
-  factory $MovieDetailsEventCopyWith(
-          MovieDetailsEvent value, $Res Function(MovieDetailsEvent) then) =
-      _$MovieDetailsEventCopyWithImpl<$Res, MovieDetailsEvent>;
-  @useResult
-  $Res call({int id});
+abstract class $UpcomingEventCopyWith<$Res> {
+  factory $UpcomingEventCopyWith(
+          UpcomingEvent value, $Res Function(UpcomingEvent) then) =
+      _$UpcomingEventCopyWithImpl<$Res, UpcomingEvent>;
 }
 
 /// @nodoc
-class _$MovieDetailsEventCopyWithImpl<$Res, $Val extends MovieDetailsEvent>
-    implements $MovieDetailsEventCopyWith<$Res> {
-  _$MovieDetailsEventCopyWithImpl(this._value, this._then);
+class _$UpcomingEventCopyWithImpl<$Res, $Val extends UpcomingEvent>
+    implements $UpcomingEventCopyWith<$Res> {
+  _$UpcomingEventCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MovieDetailsEvent
+  /// Create a copy of UpcomingEvent
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
-  }
 }
 
 /// @nodoc
-abstract class _$$GetDetailsImplCopyWith<$Res>
-    implements $MovieDetailsEventCopyWith<$Res> {
-  factory _$$GetDetailsImplCopyWith(
-          _$GetDetailsImpl value, $Res Function(_$GetDetailsImpl) then) =
-      __$$GetDetailsImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({int id});
+abstract class _$$GetMoviesImplCopyWith<$Res> {
+  factory _$$GetMoviesImplCopyWith(
+          _$GetMoviesImpl value, $Res Function(_$GetMoviesImpl) then) =
+      __$$GetMoviesImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$GetDetailsImplCopyWithImpl<$Res>
-    extends _$MovieDetailsEventCopyWithImpl<$Res, _$GetDetailsImpl>
-    implements _$$GetDetailsImplCopyWith<$Res> {
-  __$$GetDetailsImplCopyWithImpl(
-      _$GetDetailsImpl _value, $Res Function(_$GetDetailsImpl) _then)
+class __$$GetMoviesImplCopyWithImpl<$Res>
+    extends _$UpcomingEventCopyWithImpl<$Res, _$GetMoviesImpl>
+    implements _$$GetMoviesImplCopyWith<$Res> {
+  __$$GetMoviesImplCopyWithImpl(
+      _$GetMoviesImpl _value, $Res Function(_$GetMoviesImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MovieDetailsEvent
+  /// Create a copy of UpcomingEvent
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? id = null,
-  }) {
-    return _then(_$GetDetailsImpl(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as int,
-    ));
-  }
 }
 
 /// @nodoc
 
-class _$GetDetailsImpl implements _GetDetails {
-  const _$GetDetailsImpl({required this.id});
-
-  @override
-  final int id;
+class _$GetMoviesImpl implements _GetMovies {
+  const _$GetMoviesImpl();
 
   @override
   String toString() {
-    return 'MovieDetailsEvent.getDetails(id: $id)';
+    return 'UpcomingEvent.getMovies()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$GetDetailsImpl &&
-            (identical(other.id, id) || other.id == id));
+        (other.runtimeType == runtimeType && other is _$GetMoviesImpl);
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, id);
-
-  /// Create a copy of MovieDetailsEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$GetDetailsImplCopyWith<_$GetDetailsImpl> get copyWith =>
-      __$$GetDetailsImplCopyWithImpl<_$GetDetailsImpl>(this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
-    required TResult Function(int id) getDetails,
+    required TResult Function() getMovies,
   }) {
-    return getDetails(id);
+    return getMovies();
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function(int id)? getDetails,
+    TResult? Function()? getMovies,
   }) {
-    return getDetails?.call(id);
+    return getMovies?.call();
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
-    TResult Function(int id)? getDetails,
+    TResult Function()? getMovies,
     required TResult orElse(),
   }) {
-    if (getDetails != null) {
-      return getDetails(id);
+    if (getMovies != null) {
+      return getMovies();
     }
     return orElse();
   }
@@ -190,94 +140,84 @@ class _$GetDetailsImpl implements _GetDetails {
   @override
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
-    required TResult Function(_GetDetails value) getDetails,
+    required TResult Function(_GetMovies value) getMovies,
   }) {
-    return getDetails(this);
+    return getMovies(this);
   }
 
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_GetDetails value)? getDetails,
+    TResult? Function(_GetMovies value)? getMovies,
   }) {
-    return getDetails?.call(this);
+    return getMovies?.call(this);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
-    TResult Function(_GetDetails value)? getDetails,
+    TResult Function(_GetMovies value)? getMovies,
     required TResult orElse(),
   }) {
-    if (getDetails != null) {
-      return getDetails(this);
+    if (getMovies != null) {
+      return getMovies(this);
     }
     return orElse();
   }
 }
 
-abstract class _GetDetails implements MovieDetailsEvent {
-  const factory _GetDetails({required final int id}) = _$GetDetailsImpl;
-
-  @override
-  int get id;
-
-  /// Create a copy of MovieDetailsEvent
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$GetDetailsImplCopyWith<_$GetDetailsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+abstract class _GetMovies implements UpcomingEvent {
+  const factory _GetMovies() = _$GetMoviesImpl;
 }
 
 /// @nodoc
-mixin _$MovieDetailsState {
+mixin _$UpcomingState {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(MovieDetails movie) success,
     required TResult Function() loading,
-    required TResult Function(String? error) error,
+    required TResult Function(List<Movie> upcoming) success,
+    required TResult Function() error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(MovieDetails movie)? success,
     TResult? Function()? loading,
-    TResult? Function(String? error)? error,
+    TResult? Function(List<Movie> upcoming)? success,
+    TResult? Function()? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(MovieDetails movie)? success,
     TResult Function()? loading,
-    TResult Function(String? error)? error,
+    TResult Function(List<Movie> upcoming)? success,
+    TResult Function()? error,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Success value) success,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Success value)? success,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Success value)? success,
     TResult Function(_Loading value)? loading,
+    TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) =>
@@ -285,23 +225,23 @@ mixin _$MovieDetailsState {
 }
 
 /// @nodoc
-abstract class $MovieDetailsStateCopyWith<$Res> {
-  factory $MovieDetailsStateCopyWith(
-          MovieDetailsState value, $Res Function(MovieDetailsState) then) =
-      _$MovieDetailsStateCopyWithImpl<$Res, MovieDetailsState>;
+abstract class $UpcomingStateCopyWith<$Res> {
+  factory $UpcomingStateCopyWith(
+          UpcomingState value, $Res Function(UpcomingState) then) =
+      _$UpcomingStateCopyWithImpl<$Res, UpcomingState>;
 }
 
 /// @nodoc
-class _$MovieDetailsStateCopyWithImpl<$Res, $Val extends MovieDetailsState>
-    implements $MovieDetailsStateCopyWith<$Res> {
-  _$MovieDetailsStateCopyWithImpl(this._value, this._then);
+class _$UpcomingStateCopyWithImpl<$Res, $Val extends UpcomingState>
+    implements $UpcomingStateCopyWith<$Res> {
+  _$UpcomingStateCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
   final $Val _value;
   // ignore: unused_field
   final $Res Function($Val) _then;
 
-  /// Create a copy of MovieDetailsState
+  /// Create a copy of UpcomingState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -314,13 +254,13 @@ abstract class _$$InitialImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$InitialImplCopyWithImpl<$Res>
-    extends _$MovieDetailsStateCopyWithImpl<$Res, _$InitialImpl>
+    extends _$UpcomingStateCopyWithImpl<$Res, _$InitialImpl>
     implements _$$InitialImplCopyWith<$Res> {
   __$$InitialImplCopyWithImpl(
       _$InitialImpl _value, $Res Function(_$InitialImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MovieDetailsState
+  /// Create a copy of UpcomingState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -331,7 +271,7 @@ class _$InitialImpl implements _Initial {
 
   @override
   String toString() {
-    return 'MovieDetailsState.initial()';
+    return 'UpcomingState.initial()';
   }
 
   @override
@@ -347,9 +287,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(MovieDetails movie) success,
     required TResult Function() loading,
-    required TResult Function(String? error) error,
+    required TResult Function(List<Movie> upcoming) success,
+    required TResult Function() error,
   }) {
     return initial();
   }
@@ -358,9 +298,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(MovieDetails movie)? success,
     TResult? Function()? loading,
-    TResult? Function(String? error)? error,
+    TResult? Function(List<Movie> upcoming)? success,
+    TResult? Function()? error,
   }) {
     return initial?.call();
   }
@@ -369,9 +309,9 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(MovieDetails movie)? success,
     TResult Function()? loading,
-    TResult Function(String? error)? error,
+    TResult Function(List<Movie> upcoming)? success,
+    TResult Function()? error,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -384,8 +324,8 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Success value) success,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) {
     return initial(this);
@@ -395,8 +335,8 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Success value)? success,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) {
     return initial?.call(this);
@@ -406,8 +346,8 @@ class _$InitialImpl implements _Initial {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Success value)? success,
     TResult Function(_Loading value)? loading,
+    TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -418,160 +358,8 @@ class _$InitialImpl implements _Initial {
   }
 }
 
-abstract class _Initial implements MovieDetailsState {
+abstract class _Initial implements UpcomingState {
   const factory _Initial() = _$InitialImpl;
-}
-
-/// @nodoc
-abstract class _$$SuccessImplCopyWith<$Res> {
-  factory _$$SuccessImplCopyWith(
-          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
-      __$$SuccessImplCopyWithImpl<$Res>;
-  @useResult
-  $Res call({MovieDetails movie});
-}
-
-/// @nodoc
-class __$$SuccessImplCopyWithImpl<$Res>
-    extends _$MovieDetailsStateCopyWithImpl<$Res, _$SuccessImpl>
-    implements _$$SuccessImplCopyWith<$Res> {
-  __$$SuccessImplCopyWithImpl(
-      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of MovieDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? movie = null,
-  }) {
-    return _then(_$SuccessImpl(
-      movie: null == movie
-          ? _value.movie
-          : movie // ignore: cast_nullable_to_non_nullable
-              as MovieDetails,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$SuccessImpl implements _Success {
-  const _$SuccessImpl({required this.movie});
-
-  @override
-  final MovieDetails movie;
-
-  @override
-  String toString() {
-    return 'MovieDetailsState.success(movie: $movie)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$SuccessImpl &&
-            (identical(other.movie, movie) || other.movie == movie));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, movie);
-
-  /// Create a copy of MovieDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function(MovieDetails movie) success,
-    required TResult Function() loading,
-    required TResult Function(String? error) error,
-  }) {
-    return success(movie);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function(MovieDetails movie)? success,
-    TResult? Function()? loading,
-    TResult? Function(String? error)? error,
-  }) {
-    return success?.call(movie);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function(MovieDetails movie)? success,
-    TResult Function()? loading,
-    TResult Function(String? error)? error,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(movie);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial value) initial,
-    required TResult Function(_Success value) success,
-    required TResult Function(_Loading value) loading,
-    required TResult Function(_Error value) error,
-  }) {
-    return success(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial value)? initial,
-    TResult? Function(_Success value)? success,
-    TResult? Function(_Loading value)? loading,
-    TResult? Function(_Error value)? error,
-  }) {
-    return success?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial value)? initial,
-    TResult Function(_Success value)? success,
-    TResult Function(_Loading value)? loading,
-    TResult Function(_Error value)? error,
-    required TResult orElse(),
-  }) {
-    if (success != null) {
-      return success(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class _Success implements MovieDetailsState {
-  const factory _Success({required final MovieDetails movie}) = _$SuccessImpl;
-
-  MovieDetails get movie;
-
-  /// Create a copy of MovieDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -583,13 +371,13 @@ abstract class _$$LoadingImplCopyWith<$Res> {
 
 /// @nodoc
 class __$$LoadingImplCopyWithImpl<$Res>
-    extends _$MovieDetailsStateCopyWithImpl<$Res, _$LoadingImpl>
+    extends _$UpcomingStateCopyWithImpl<$Res, _$LoadingImpl>
     implements _$$LoadingImplCopyWith<$Res> {
   __$$LoadingImplCopyWithImpl(
       _$LoadingImpl _value, $Res Function(_$LoadingImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MovieDetailsState
+  /// Create a copy of UpcomingState
   /// with the given fields replaced by the non-null parameter values.
 }
 
@@ -600,7 +388,7 @@ class _$LoadingImpl implements _Loading {
 
   @override
   String toString() {
-    return 'MovieDetailsState.loading()';
+    return 'UpcomingState.loading()';
   }
 
   @override
@@ -616,9 +404,9 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(MovieDetails movie) success,
     required TResult Function() loading,
-    required TResult Function(String? error) error,
+    required TResult Function(List<Movie> upcoming) success,
+    required TResult Function() error,
   }) {
     return loading();
   }
@@ -627,9 +415,9 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(MovieDetails movie)? success,
     TResult? Function()? loading,
-    TResult? Function(String? error)? error,
+    TResult? Function(List<Movie> upcoming)? success,
+    TResult? Function()? error,
   }) {
     return loading?.call();
   }
@@ -638,9 +426,9 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(MovieDetails movie)? success,
     TResult Function()? loading,
-    TResult Function(String? error)? error,
+    TResult Function(List<Movie> upcoming)? success,
+    TResult Function()? error,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -653,8 +441,8 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Success value) success,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) {
     return loading(this);
@@ -664,8 +452,8 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Success value)? success,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) {
     return loading?.call(this);
@@ -675,8 +463,8 @@ class _$LoadingImpl implements _Loading {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Success value)? success,
     TResult Function(_Loading value)? loading,
+    TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -687,108 +475,115 @@ class _$LoadingImpl implements _Loading {
   }
 }
 
-abstract class _Loading implements MovieDetailsState {
+abstract class _Loading implements UpcomingState {
   const factory _Loading() = _$LoadingImpl;
 }
 
 /// @nodoc
-abstract class _$$ErrorImplCopyWith<$Res> {
-  factory _$$ErrorImplCopyWith(
-          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
-      __$$ErrorImplCopyWithImpl<$Res>;
+abstract class _$$SuccessImplCopyWith<$Res> {
+  factory _$$SuccessImplCopyWith(
+          _$SuccessImpl value, $Res Function(_$SuccessImpl) then) =
+      __$$SuccessImplCopyWithImpl<$Res>;
   @useResult
-  $Res call({String? error});
+  $Res call({List<Movie> upcoming});
 }
 
 /// @nodoc
-class __$$ErrorImplCopyWithImpl<$Res>
-    extends _$MovieDetailsStateCopyWithImpl<$Res, _$ErrorImpl>
-    implements _$$ErrorImplCopyWith<$Res> {
-  __$$ErrorImplCopyWithImpl(
-      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
+class __$$SuccessImplCopyWithImpl<$Res>
+    extends _$UpcomingStateCopyWithImpl<$Res, _$SuccessImpl>
+    implements _$$SuccessImplCopyWith<$Res> {
+  __$$SuccessImplCopyWithImpl(
+      _$SuccessImpl _value, $Res Function(_$SuccessImpl) _then)
       : super(_value, _then);
 
-  /// Create a copy of MovieDetailsState
+  /// Create a copy of UpcomingState
   /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? error = freezed,
+    Object? upcoming = null,
   }) {
-    return _then(_$ErrorImpl(
-      error: freezed == error
-          ? _value.error
-          : error // ignore: cast_nullable_to_non_nullable
-              as String?,
+    return _then(_$SuccessImpl(
+      upcoming: null == upcoming
+          ? _value._upcoming
+          : upcoming // ignore: cast_nullable_to_non_nullable
+              as List<Movie>,
     ));
   }
 }
 
 /// @nodoc
 
-class _$ErrorImpl implements _Error {
-  const _$ErrorImpl({this.error});
+class _$SuccessImpl implements _Success {
+  const _$SuccessImpl({required final List<Movie> upcoming})
+      : _upcoming = upcoming;
 
+  final List<Movie> _upcoming;
   @override
-  final String? error;
+  List<Movie> get upcoming {
+    if (_upcoming is EqualUnmodifiableListView) return _upcoming;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_upcoming);
+  }
 
   @override
   String toString() {
-    return 'MovieDetailsState.error(error: $error)';
+    return 'UpcomingState.success(upcoming: $upcoming)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$ErrorImpl &&
-            (identical(other.error, error) || other.error == error));
+            other is _$SuccessImpl &&
+            const DeepCollectionEquality().equals(other._upcoming, _upcoming));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, error);
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_upcoming));
 
-  /// Create a copy of MovieDetailsState
+  /// Create a copy of UpcomingState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      __$$ErrorImplCopyWithImpl<_$ErrorImpl>(this, _$identity);
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      __$$SuccessImplCopyWithImpl<_$SuccessImpl>(this, _$identity);
 
   @override
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
     required TResult Function() initial,
-    required TResult Function(MovieDetails movie) success,
     required TResult Function() loading,
-    required TResult Function(String? error) error,
+    required TResult Function(List<Movie> upcoming) success,
+    required TResult Function() error,
   }) {
-    return error(this.error);
+    return success(upcoming);
   }
 
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
     TResult? Function()? initial,
-    TResult? Function(MovieDetails movie)? success,
     TResult? Function()? loading,
-    TResult? Function(String? error)? error,
+    TResult? Function(List<Movie> upcoming)? success,
+    TResult? Function()? error,
   }) {
-    return error?.call(this.error);
+    return success?.call(upcoming);
   }
 
   @override
   @optionalTypeArgs
   TResult maybeWhen<TResult extends Object?>({
     TResult Function()? initial,
-    TResult Function(MovieDetails movie)? success,
     TResult Function()? loading,
-    TResult Function(String? error)? error,
+    TResult Function(List<Movie> upcoming)? success,
+    TResult Function()? error,
     required TResult orElse(),
   }) {
-    if (error != null) {
-      return error(this.error);
+    if (success != null) {
+      return success(upcoming);
     }
     return orElse();
   }
@@ -797,8 +592,133 @@ class _$ErrorImpl implements _Error {
   @optionalTypeArgs
   TResult map<TResult extends Object?>({
     required TResult Function(_Initial value) initial,
-    required TResult Function(_Success value) success,
     required TResult Function(_Loading value) loading,
+    required TResult Function(_Success value) success,
+    required TResult Function(_Error value) error,
+  }) {
+    return success(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Success value)? success,
+    TResult? Function(_Error value)? error,
+  }) {
+    return success?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Success value)? success,
+    TResult Function(_Error value)? error,
+    required TResult orElse(),
+  }) {
+    if (success != null) {
+      return success(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _Success implements UpcomingState {
+  const factory _Success({required final List<Movie> upcoming}) = _$SuccessImpl;
+
+  List<Movie> get upcoming;
+
+  /// Create a copy of UpcomingState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SuccessImplCopyWith<_$SuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$ErrorImplCopyWith<$Res> {
+  factory _$$ErrorImplCopyWith(
+          _$ErrorImpl value, $Res Function(_$ErrorImpl) then) =
+      __$$ErrorImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$ErrorImplCopyWithImpl<$Res>
+    extends _$UpcomingStateCopyWithImpl<$Res, _$ErrorImpl>
+    implements _$$ErrorImplCopyWith<$Res> {
+  __$$ErrorImplCopyWithImpl(
+      _$ErrorImpl _value, $Res Function(_$ErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of UpcomingState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$ErrorImpl implements _Error {
+  const _$ErrorImpl();
+
+  @override
+  String toString() {
+    return 'UpcomingState.error()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$ErrorImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<Movie> upcoming) success,
+    required TResult Function() error,
+  }) {
+    return error();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<Movie> upcoming)? success,
+    TResult? Function()? error,
+  }) {
+    return error?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<Movie> upcoming)? success,
+    TResult Function()? error,
+    required TResult orElse(),
+  }) {
+    if (error != null) {
+      return error();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Success value) success,
     required TResult Function(_Error value) error,
   }) {
     return error(this);
@@ -808,8 +728,8 @@ class _$ErrorImpl implements _Error {
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
     TResult? Function(_Initial value)? initial,
-    TResult? Function(_Success value)? success,
     TResult? Function(_Loading value)? loading,
+    TResult? Function(_Success value)? success,
     TResult? Function(_Error value)? error,
   }) {
     return error?.call(this);
@@ -819,8 +739,8 @@ class _$ErrorImpl implements _Error {
   @optionalTypeArgs
   TResult maybeMap<TResult extends Object?>({
     TResult Function(_Initial value)? initial,
-    TResult Function(_Success value)? success,
     TResult Function(_Loading value)? loading,
+    TResult Function(_Success value)? success,
     TResult Function(_Error value)? error,
     required TResult orElse(),
   }) {
@@ -831,14 +751,6 @@ class _$ErrorImpl implements _Error {
   }
 }
 
-abstract class _Error implements MovieDetailsState {
-  const factory _Error({final String? error}) = _$ErrorImpl;
-
-  String? get error;
-
-  /// Create a copy of MovieDetailsState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+abstract class _Error implements UpcomingState {
+  const factory _Error() = _$ErrorImpl;
 }

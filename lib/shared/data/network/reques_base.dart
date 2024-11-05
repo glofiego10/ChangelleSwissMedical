@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:http/http.dart' as http;
 import 'package:logger/logger.dart';
 
@@ -26,7 +28,7 @@ class RequestBase {
           ..e('Request: ${resp.request?.method} ${resp.request?.url}')
           ..e('Header: ${resp.request?.headers.entries.map((entry) => '${entry.key}: ${entry.value}').join('\n')}');
 
-        throw Exception('Request failed with status: ${resp.statusCode}');
+        throw HttpException('Request failed with status: ${resp.statusCode}');
       }
 
       final responseData = decodeJsonResponse(resp.bodyBytes);

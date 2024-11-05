@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:challenge_swiss/shared/data/mapper_to_entity/movie_mapper.dart';
 import 'package:challenge_swiss/shared/data/source/movie_local_data_source.dart';
 import 'package:challenge_swiss/shared/data/source/movie_remote_data_source.dart';
@@ -33,12 +35,16 @@ class MovieRepositoryImpl implements MovieRepository {
       );
 
       await localDataSource.cacheMovies(category, response);
-    } catch (_) {
-      final cachedMovies = await localDataSource.getCachedMovies(category);
+    } catch (error) {
+      try {
+        final cachedMovies = await localDataSource.getCachedMovies(category);
 
-      moviesList.addAll(
-        cachedMovies.map((model) => model.toEntity()).toList(),
-      );
+        moviesList.addAll(
+          cachedMovies.map((model) => model.toEntity()).toList(),
+        );
+      } catch (cacheError) {
+        throw HttpException('Error al buscar la categoria $category');
+      }
     }
 
     return moviesList;
