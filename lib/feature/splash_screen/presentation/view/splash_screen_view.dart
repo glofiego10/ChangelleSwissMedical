@@ -1,9 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:challenge_swiss/core/routes/app_routes.dart';
-import 'package:challenge_swiss/feature/home/presentation/blocs/Upcoming/upcoming_bloc.dart';
 import 'package:challenge_swiss/feature/home/presentation/blocs/popular/popular_bloc.dart';
 import 'package:challenge_swiss/feature/home/presentation/blocs/top_rated/top_rated_bloc.dart';
+import 'package:challenge_swiss/feature/home/presentation/blocs/upcoming/upcoming_bloc.dart';
 import 'package:challenge_swiss/feature/splash_screen/presentation/bloc/splash_screen_bloc.dart';
+import 'package:challenge_swiss/shared/presentation/widgets/loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -40,7 +41,7 @@ class _SplashPageState extends State<SplashPage> {
             );
           },
         ),
-        BlocListener<UpcomingBloc, UpcomingState>(
+        BlocListener<TopRatedBloc, TopRatedState>(
           listener: (context, state) {
             state.whenOrNull(
               success: (list) {
@@ -50,7 +51,7 @@ class _SplashPageState extends State<SplashPage> {
             );
           },
         ),
-        BlocListener<TopRatedBloc, TopRatedState>(
+        BlocListener<UpcomingBloc, UpcomingState>(
           listener: (context, state) {
             state.whenOrNull(
               success: (list) {
@@ -77,29 +78,16 @@ class SplashScreenView extends StatelessWidget {
       listener: (context, state) {
         state.whenOrNull(
           success: () {
-            router.replaceNamed(AppRoutes.home);
+            router.navigateNamed(AppRoutes.home);
           },
         );
       },
       builder: (context, state) {
         return Scaffold(
-          backgroundColor: Colors.black45,
+          backgroundColor: Colors.black,
           body: Center(
             child: state.maybeWhen(
-              loading: () => const Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  CircularProgressIndicator(
-                    valueColor: AlwaysStoppedAnimation<Color>(Colors.red),
-                    strokeWidth: 5.0,
-                  ),
-                  SizedBox(height: 20),
-                  Text(
-                    'Cargando...',
-                    style: TextStyle(color: Colors.white, fontSize: 16),
-                  ),
-                ],
-              ),
+              loading: () => const LoadingIndicator(),
               error: () => Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

@@ -1,9 +1,15 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:challenge_swiss/core/constants/app_button_styles.dart';
+import 'package:challenge_swiss/core/constants/app_colors.dart';
+import 'package:challenge_swiss/core/constants/app_text_style.dart';
 import 'package:challenge_swiss/core/di/injections_container.dart';
 import 'package:challenge_swiss/feature/movie_details/presentation/bloc/movie_details_bloc.dart';
 import 'package:challenge_swiss/shared/presentation/widgets/cached_image_network.dart';
+import 'package:challenge_swiss/shared/presentation/widgets/loading_indicator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../widgets/widget.dart';
 
 @RoutePage()
 class MovieDetailsPage extends StatelessWidget {
@@ -21,85 +27,82 @@ class MovieDetailsPage extends StatelessWidget {
 }
 
 class MovieDetailsView extends StatelessWidget {
-  const MovieDetailsView({
-    super.key,
-  });
+  const MovieDetailsView({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
+        leading: const BackButton(color: Colors.white),
       ),
       body: BlocBuilder<MovieDetailsBloc, MovieDetailsState>(
         builder: (context, state) {
           return state.maybeWhen(
-            loading: () => const Center(
-              child: CircularProgressIndicator(),
-            ),
+            loading: () => const Center(child: LoadingIndicator()),
             success: (movie) {
-              return SingleChildScrollView(
-                padding: const EdgeInsets.all(16),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Center(
-                      child: CachedImageWidget(
-                        imageUrl:
-                            'https://image.tmdb.org/t/p/w500${movie.posterPath}',
-                        height: 300,
-                        placeholder: (context, url) =>
-                            const CircularProgressIndicator(),
-                        errorWidget: (context, url, error) =>
-                            const Icon(Icons.error, color: Colors.red),
-                      ),
+              return Stack(
+                children: [
+                  CachedImageWidget(
+                    imageUrl:
+                        'https://image.tmdb.org/t/p/w500${movie.posterPath}',
+                    height: double.infinity,
+                    width: double.infinity,
+                    errorWidget: (context, url, error) =>
+                        const Icon(Icons.error, color: AppColors.red),
+                  ),
+                  Container(
+                    decoration: const BoxDecoration(
+                      gradient: AppColors.gradientBlack,
                     ),
-                    const SizedBox(height: 16),
-                    Text(
-                      movie.title,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
-                        fontWeight: FontWeight.bold,
-                      ),
-                      textAlign: TextAlign.center,
-                    ),
-                    const SizedBox(height: 8),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        const Icon(Icons.star, color: Colors.yellow, size: 24),
-                        const SizedBox(width: 4),
-                        Text(
-                          '${movie.rating}',
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
+                  ),
+                  SafeArea(
+                    child: SingleChildScrollView(
+                      padding: const EdgeInsets.all(20),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          GenderMovie(genres: movie.genres),
+                          const SizedBox(height: 40),
+                          Center(
+                            child: Text(
+                              movie.title,
+                              style: AppTextStyle.tittleText,
+                              textAlign: TextAlign.center,
+                            ),
                           ),
-                        ),
-                      ],
-                    ),
-                    const SizedBox(height: 16),
-                    const Text(
-                      'Sinopsis',
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
+                          const SizedBox(height: 40),
+                          DateAndRateMovie(
+                            date: movie.releaseDate,
+                            rating: movie.rating,
+                          ),
+                          const SizedBox(height: 40),
+                          const Text(
+                            'Sinopsis',
+                            style: AppTextStyle.subTittleText,
+                          ),
+                          const SizedBox(height: 8),
+                          Text(
+                            movie.overview,
+                            style: AppTextStyle.textStyle1,
+                          ),
+                          const SizedBox(height: 40),
+                          Center(
+                            child: ElevatedButton.icon(
+                              onPressed: () {},
+                              icon: const Icon(Icons.play_arrow),
+                              label: const Text('Ver Tráiler'),
+                              style: AppButtonStyle.buttonStyleCommon,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
-                    const SizedBox(height: 8),
-                    Text(
-                      movie.overview,
-                      style: const TextStyle(
-                        color: Colors.white70,
-                        fontSize: 16,
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               );
             },
             orElse: () => const SizedBox.shrink(),

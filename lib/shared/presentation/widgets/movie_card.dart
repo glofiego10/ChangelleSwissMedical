@@ -15,20 +15,17 @@ class MovieCard extends StatelessWidget {
         context.router.navigate(MovieDetailsRoute(id: movie.id));
       },
       child: Container(
-        width: 120,
-        margin: const EdgeInsets.symmetric(horizontal: 4.0),
+        width: 150,
+        margin: const EdgeInsets.symmetric(horizontal: 10),
         child: Column(
           children: [
-            AspectRatio(
-              aspectRatio: 2 / 3,
-              child: CachedImageWidget(
-                imageUrl: 'https://image.tmdb.org/t/p/w500${movie.posterPath}',
-              ),
+            CachedImageWidget(
+              imageUrl: 'https://image.tmdb.org/t/p/w500${movie.posterPath}',
             ),
             const SizedBox(height: 5),
             Text(
               movie.title,
-              style: const TextStyle(color: Colors.white, fontSize: 12),
+              style: const TextStyle(color: Colors.white, fontSize: 20),
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,

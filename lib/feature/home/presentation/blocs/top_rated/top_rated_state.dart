@@ -9,3 +9,7 @@ class TopRatedState with _$TopRatedState {
   }) = _Success;
   const factory TopRatedState.error() = _Error;
 }
+
+extension TopRatedStateX on TopRatedState {
+  bool get isLoading => this is _Loading;
+}
