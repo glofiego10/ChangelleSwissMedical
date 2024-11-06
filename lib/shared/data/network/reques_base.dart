@@ -54,17 +54,9 @@ class RequestBase {
     } catch (error) {
       _logger.e('Request: ${error.toString()}');
       return ApiResponse(
-        message: _getError(error.toString()),
+        message: error.toString(),
         statusCode: StatusCode.unknown,
       );
     }
-  }
-
-  String _getError(String message) {
-    if (message.contains('One of the fields is already in use')) {
-      return 'Uno o más datos ingresado ya se encuentran en uso.';
-    }
-
-    return message;
   }
 }
