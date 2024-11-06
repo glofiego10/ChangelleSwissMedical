@@ -9,14 +9,9 @@ import 'package:challenge_swiss/shared/presentation/widgets/scroll_web.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class App extends StatefulWidget {
+class App extends StatelessWidget {
   const App({super.key});
 
-  @override
-  State<App> createState() => _AppState();
-}
-
-class _AppState extends State<App> {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
