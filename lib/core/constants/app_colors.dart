@@ -4,6 +4,7 @@ class AppColors {
   static const Color black = Color(0xFF33323A);
 
   static const Color red = Color(0xFFB00020);
+  static const Color white = Color.fromARGB(255, 228, 224, 224);
 
   static const gradientBlack = LinearGradient(
     begin: Alignment.topCenter,
