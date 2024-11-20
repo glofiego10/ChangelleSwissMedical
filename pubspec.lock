@@ -178,10 +178,10 @@ packages:
     dependency: "direct main"
     description:
       name: carousel_slider_plus
-      sha256: ae21c6589eb684e39f60ce0a994920b119f2e4860436ad3e8c77bb680cbb4af9
+      sha256: "6e3dbb21bca29383ade8a155d3c1acb0233a3068348905189978d714495d2df5"
       url: "https://pub.dev"
     source: hosted
-    version: "7.0.1"
+    version: "7.0.2"
   characters:
     dependency: transitive
     description:
