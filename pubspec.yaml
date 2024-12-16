@@ -38,7 +38,7 @@ dependencies:
   json_annotation: ^4.9.0
 
   # Data Manipulation
-  get_it: ^8.0.2
+  get_it: ^8.0.3
 
   # UI
   shimmer: ^3.0.0 
